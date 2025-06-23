@@ -1,0 +1,8 @@
+<div class="page-container">
+  <app-search-bar (valueChange)="onSearch($event)"></app-search-bar>
+  <div *ngIf="loading" class="loading">Loading recipes...</div>
+  <div class="recipes-grid" *ngIf="!loading">
+    <app-recipe-card *ngFor="let r of filtered" [recipe]="r"></app-recipe-card>
+    <div *ngIf="filtered.length === 0" class="empty">No recipes found.</div>
+  </div>
+</div>

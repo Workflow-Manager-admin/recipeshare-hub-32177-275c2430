@@ -1,0 +1,23 @@
+.page-container {
+  margin: 2.1rem auto;
+  max-width: 860px;
+  width: 95%;
+}
+.loading {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--accent)
+}
+.recipes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 19px;
+  justify-content: start;
+  align-items: start;
+  margin-top: 2.5rem;
+}
+.empty {
+  margin: 2rem auto;
+  color: var(--primary);
+  font-size: 1.10rem;
+}

@@ -1,1 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary: #ff7043;
+  --secondary: #ffd54f;
+  --accent: #66bb6a;
+  --background: #fff;
+  --text: #232323;
+
+  --header-height: 64px;
+  --sidebar-width: 220px;
+}
+
+/* Layout styles */
+body {
+  background: var(--background);
+  margin: 0;
+  color: var(--text);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+/* Scrollbar for sidebar/main */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #eeeeee;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 10px;
+}
+
+/* Accent pill and button styles */
+.btn, button, .mat-button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .2s;
+}
+.btn-accent, .mat-accent {
+  background: var(--accent);
+}
+.btn:disabled, button:disabled {
+  background: #ccc;
+  color: #757575;
+  cursor: default;
+}
+
+/* Responsive utilities */
+@media (max-width: 900px) {
+  :root {
+    --sidebar-width: 60px;
+  }
+}
+@media (max-width: 600px) {
+  :root {
+    --header-height: 52px;
+    --sidebar-width: 0;
+  }
+  .sidebar {
+    display: none;
+  }
+}

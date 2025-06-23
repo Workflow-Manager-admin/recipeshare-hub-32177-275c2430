@@ -1,0 +1,13 @@
+import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+
+// PUBLIC_INTERFACE
+@Component({
+  selector: 'app-sidebar',
+  templateUrl: './sidebar.component.html',
+  styleUrl: './sidebar.component.css',
+  standalone: true,
+  imports: [CommonModule, RouterModule]
+})
+export class SidebarComponent { }

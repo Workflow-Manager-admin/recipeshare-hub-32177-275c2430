@@ -1,0 +1,8 @@
+<div class="card" (click)="goToRecipe()">
+  <img *ngIf="recipe?.image" [src]="recipe.image" alt="{{ recipe.title }} image" class="card-img"/>
+  <div class="card-body">
+    <h2>{{ recipe.title }}</h2>
+    <p class="desc">{{ recipe.description }}</p>
+    <button class="btn btn-accent" (click)="$event.stopPropagation(); goToRecipe()">View Details</button>
+  </div>
+</div>

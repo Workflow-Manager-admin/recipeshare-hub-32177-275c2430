@@ -1,0 +1,32 @@
+.profile-container {
+  max-width: 390px;
+  margin: 2.8rem auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px #f6d49920;
+}
+.profile-container h1 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1.8rem;
+}
+form label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #776343;
+  margin-bottom: 1.2rem;
+}
+form input {
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #e0deda;
+  font-size: 1rem;
+  margin-top: .35rem;
+  background: #fffcfa;
+}
+button {
+  margin-top: 1.5rem;
+}

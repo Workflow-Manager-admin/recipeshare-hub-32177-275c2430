@@ -1,0 +1,28 @@
+<div class="detail-page" *ngIf="!loading && recipe">
+  <div class="cover" *ngIf="recipe.image">
+    <img [src]="recipe.image" alt="Recipe cover image"/>
+  </div>
+  <div class="heading">
+    <h1>{{ recipe.title }}</h1>
+    <div class="author">By {{ recipe.author }}</div>
+    <div style="margin-top:10px;">
+      <a [routerLink]="['/recipes', recipe.id, 'edit']" class="btn btn-accent">Edit</a>
+      <button class="btn" style="margin-left:8px;">Delete</button>
+    </div>
+  </div>
+  <div class="content-section">
+    <h3>Description</h3>
+    <p>{{ recipe.description }}</p>
+    <h3>Ingredients</h3>
+    <ul>
+      <li *ngFor="let ing of recipe.ingredients">{{ ing }}</li>
+    </ul>
+    <h3>Instructions</h3>
+    <ol>
+      <li *ngFor="let step of recipe.steps">{{ step }}</li>
+    </ol>
+  </div>
+</div>
+<div class="loading" *ngIf="loading">
+  Loading recipe details...
+</div>

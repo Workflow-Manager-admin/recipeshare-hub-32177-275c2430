@@ -1,0 +1,37 @@
+.header {
+  height: var(--header-height);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--primary);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.35rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: border-color .18s;
+  padding: 2px 2px 0 2px;
+}
+.nav a.active {
+  border-bottom: 2px solid var(--secondary);
+}

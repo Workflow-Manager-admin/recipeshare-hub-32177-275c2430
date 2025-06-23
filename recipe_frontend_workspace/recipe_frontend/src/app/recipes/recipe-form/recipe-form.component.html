@@ -1,0 +1,29 @@
+<section class="form-container">
+  <h1>{{ isEdit ? "Edit" : "Add" }} Recipe</h1>
+  <form [formGroup]="recipeForm" (ngSubmit)="submit()">
+    <label>Title <input formControlName="title" required></label>
+    <label>Description <textarea formControlName="description" rows="2"></textarea></label>
+    <div class="section">
+      <label>Ingredients</label>
+      <div *ngFor="let ing of ingredients.controls; let i = index">
+        <input [formControl]="ingredientControl(i)" placeholder="Ingredient">
+        <button type="button" class="btn btn-accent" (click)="removeIngredient(i)" *ngIf="ingredients.length > 1">Remove</button>
+      </div>
+      <button type="button" class="btn" (click)="addIngredient()">Add Ingredient</button>
+    </div>
+    <div class="section">
+      <label>Steps</label>
+      <div *ngFor="let st of steps.controls; let i = index">
+        <input [formControl]="stepControl(i)" placeholder="Instruction step">
+        <button type="button" class="btn btn-accent" (click)="removeStep(i)" *ngIf="steps.length > 1">Remove</button>
+      </div>
+      <button type="button" class="btn" (click)="addStep()">Add Step</button>
+    </div>
+    <div class="section">
+      <label>Cover Image</label>
+      <input type="file" (change)="onFileChange($event)">
+      <img *ngIf="imageUrl" [src]="imageUrl" class="preview">
+    </div>
+    <button type="submit" class="btn btn-accent" [disabled]="loading">{{ loading ? "Saving..." : (isEdit ? "Update" : "Create") }}</button>
+  </form>
+</section>

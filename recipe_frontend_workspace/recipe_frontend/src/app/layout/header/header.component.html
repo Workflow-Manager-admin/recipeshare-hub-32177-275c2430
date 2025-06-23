@@ -1,0 +1,12 @@
+<header class="header">
+  <div class="logo">
+    <a [routerLink]="['/']">🍲 RecipeShare Hub</a>
+  </div>
+  <nav class="nav">
+    <a [routerLink]="['/recipes']" routerLinkActive="active">All Recipes</a>
+    <a [routerLink]="['/recipes/new']" routerLinkActive="active">Add Recipe</a>
+    <a [routerLink]="['/profile']" *ngIf="true" routerLinkActive="active">Profile</a>
+    <a [routerLink]="['/login']" *ngIf="false" routerLinkActive="active">Login</a>
+    <!-- Authentication state will show/hide Profile/Login as appropriate -->
+  </nav>
+</header>
